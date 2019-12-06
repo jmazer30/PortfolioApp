@@ -13,6 +13,7 @@
 		F1879F70237DB75B00D40623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1879F6E237DB75B00D40623 /* Main.storyboard */; };
 		F1879F72237DB75F00D40623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1879F71237DB75F00D40623 /* Assets.xcassets */; };
 		F1879F75237DB75F00D40623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1879F73237DB75F00D40623 /* LaunchScreen.storyboard */; };
+		F1AB04D0238C379D007987EC /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB04CF238C379D007987EC /* AboutMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F1879F71237DB75F00D40623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1879F74237DB75F00D40623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1879F76237DB75F00D40623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AB04CF238C379D007987EC /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F1879F6A237DB75B00D40623 /* SceneDelegate.swift */,
 				F1879F6C237DB75B00D40623 /* ViewController.swift */,
 				F1879F6E237DB75B00D40623 /* Main.storyboard */,
+				F1AB04CF238C379D007987EC /* AboutMe.swift */,
 				F1879F71237DB75F00D40623 /* Assets.xcassets */,
 				F1879F73237DB75F00D40623 /* LaunchScreen.storyboard */,
 				F1879F76237DB75F00D40623 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				F1879F6D237DB75B00D40623 /* ViewController.swift in Sources */,
 				F1879F69237DB75B00D40623 /* AppDelegate.swift in Sources */,
+				F1AB04D0238C379D007987EC /* AboutMe.swift in Sources */,
 				F1879F6B237DB75B00D40623 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYCV97HV74;
 				INFOPLIST_FILE = PortfolioApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYCV97HV74;
 				INFOPLIST_FILE = PortfolioApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
