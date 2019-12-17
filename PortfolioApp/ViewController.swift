@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var myImageView: UIImageView!
-    var myImages: [UIImage] = [UIImage]()
     
+    var myImages: [UIImage] = [UIImage]()
     var count = 0
+    
     override func viewDidLoad()
+        
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,7 +24,7 @@ class ViewController: UIViewController
         myImages = [UIImage(named: "1")!, UIImage(named: "2")!, UIImage(named: "3")!, UIImage(named: "16")!, UIImage(named: "4")!, UIImage(named: "5")!, UIImage(named: "6")!, UIImage(named: "7")!, UIImage(named: "8")!, UIImage(named: "9")!, UIImage(named: "10")!, UIImage(named: "11")!, UIImage(named: "12")!, UIImage(named: "13")!, UIImage(named: "14")!, UIImage(named: "15")!, UIImage(named: "17")!]
         myImageView.image = myImages [0]
     }
-    
+   
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer)
     {
          let imageView = sender.view as! UIImageView
@@ -75,7 +77,7 @@ class ViewController: UIViewController
           {
               completion in
               self.count = self.count + 1
-              // CHECK OUT OF BOUMDS AND FIX
+              // CHECK OUT OF BOUNDS AND FIX
               if self.count >= self.myImages.count
               {
                   self.count = 0
