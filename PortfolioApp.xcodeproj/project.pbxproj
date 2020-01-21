@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,11 @@
 		F1879F70237DB75B00D40623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1879F6E237DB75B00D40623 /* Main.storyboard */; };
 		F1879F72237DB75F00D40623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1879F71237DB75F00D40623 /* Assets.xcassets */; };
 		F1879F75237DB75F00D40623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1879F73237DB75F00D40623 /* LaunchScreen.storyboard */; };
+		F191023723BF9EE700A286E4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F191023623BF9EE700A286E4 /* SDWebImage */; };
+		F191023923BF9EE700A286E4 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F191023823BF9EE700A286E4 /* SDWebImageMapKit */; };
 		F1AB04D0238C379D007987EC /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB04CF238C379D007987EC /* AboutMe.swift */; };
+		F1B8105A23C8DD3F00922DED /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8105923C8DD3F00922DED /* StringExtensions.swift */; };
+		F1CE7B6723BE4FEC0010CCD2 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE7B6623BE4FEC0010CCD2 /* ZoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,8 @@
 		F1879F74237DB75F00D40623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1879F76237DB75F00D40623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1AB04CF238C379D007987EC /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
+		F1B8105923C8DD3F00922DED /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		F1CE7B6623BE4FEC0010CCD2 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F191023923BF9EE700A286E4 /* SDWebImageMapKit in Frameworks */,
+				F191023723BF9EE700A286E4 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +69,8 @@
 				F1879F68237DB75B00D40623 /* AppDelegate.swift */,
 				F1879F6A237DB75B00D40623 /* SceneDelegate.swift */,
 				F1879F6C237DB75B00D40623 /* ViewController.swift */,
+				F1CE7B6623BE4FEC0010CCD2 /* ZoomViewController.swift */,
+				F1B8105923C8DD3F00922DED /* StringExtensions.swift */,
 				F1879F6E237DB75B00D40623 /* Main.storyboard */,
 				F1AB04CF238C379D007987EC /* AboutMe.swift */,
 				F1879F71237DB75F00D40623 /* Assets.xcassets */,
@@ -86,6 +96,10 @@
 			dependencies = (
 			);
 			name = PortfolioApp;
+			packageProductDependencies = (
+				F191023623BF9EE700A286E4 /* SDWebImage */,
+				F191023823BF9EE700A286E4 /* SDWebImageMapKit */,
+			);
 			productName = PortfolioApp;
 			productReference = F1879F65237DB75B00D40623 /* PortfolioApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,9 @@
 				Base,
 			);
 			mainGroup = F1879F5C237DB75B00D40623;
+			packageReferences = (
+				F191023523BF9EE700A286E4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = F1879F66237DB75B00D40623 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,7 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B8105A23C8DD3F00922DED /* StringExtensions.swift in Sources */,
 				F1879F6D237DB75B00D40623 /* ViewController.swift in Sources */,
+				F1CE7B6723BE4FEC0010CCD2 /* ZoomViewController.swift in Sources */,
 				F1879F69237DB75B00D40623 /* AppDelegate.swift in Sources */,
 				F1AB04D0238C379D007987EC /* AboutMe.swift in Sources */,
 				F1879F6B237DB75B00D40623 /* SceneDelegate.swift in Sources */,
@@ -342,6 +361,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F191023523BF9EE700A286E4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F191023623BF9EE700A286E4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F191023523BF9EE700A286E4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F191023823BF9EE700A286E4 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F191023523BF9EE700A286E4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1879F5D237DB75B00D40623 /* Project object */;
 }

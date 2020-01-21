@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,6 +75,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myImageView" destination="3iL-rx-R8X" id="9j4-wd-C6P"/>
+                        <segue destination="cfL-NB-08t" kind="presentation" identifier="imageSegue" id="1M8-Wu-jDk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,6 +96,46 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="106.47321428571428"/>
+        </scene>
+        <!--Zoom View Controller-->
+        <scene sceneID="2Fu-Qa-XKP">
+            <objects>
+                <viewController id="cfL-NB-08t" customClass="ZoomViewController" customModule="PortfolioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5f3-e4-Qch">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="vGh-tK-Q1l">
+                                <rect key="frame" x="0.0" y="105" width="414" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ygc-b5-X5h" appends="YES" id="zR2-WY-bhU"/>
+                                    <outletCollection property="gestureRecognizers" destination="VLJ-mU-cPE" appends="YES" id="1wV-6A-HIN"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="SpK-vw-JTg"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageVIew" destination="vGh-tK-Q1l" id="AJ5-1g-HO4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gju-x4-PgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="ygc-b5-X5h">
+                    <connections>
+                        <action selector="scalePiece:" destination="cfL-NB-08t" id="eJh-LB-jtg"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="VLJ-mU-cPE">
+                    <connections>
+                        <action selector="panPiece:" destination="cfL-NB-08t" id="DAb-fL-rwt"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1623" y="-496"/>
         </scene>
         <!--About Me-->
         <scene sceneID="wpl-NK-h9k">
@@ -155,7 +196,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrM-hn-Fik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552.1739130434785" y="105.80357142857143"/>
+            <point key="canvasLocation" x="1916" y="191"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1600" height="2400"/>
+    </resources>
 </document>
